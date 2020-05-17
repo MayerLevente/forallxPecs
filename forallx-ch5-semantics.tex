@@ -994,6 +994,7 @@ The same thing holds for any sentence of QL. Because all of the variables are bo
 
 Truth in QL is \emph{truth in a model}. Sentences of QL are not flat-footedly true or false as mere symbols, but only relative to a model. A model provides the meaning of the symbols, insofar as it makes any difference to truth and falsity.
 
+Az igazság a QL -ben; a \emph{truth in a model}. A QL-ben található mondatok nem simán igazak vagy hamisak mint a szimpla szimbólumok, de csak a modellhez relatívak. A modell biztosítja a szimbólumok jelentését addig, amíg bármilyen különbséget teremt az igazság és a valótlanság felé.
 
 
 \subsection{Reasoning about all models (reprise)}
@@ -1002,11 +1003,21 @@ At the end of section \ref{sec.UsingModels}, we were stymied when we tried to sh
 Consider some arbitrary model \model{M}. Now consider an arbitrary member of the UD; for the sake of convenience, call it $\Omega$. It must be the case either that $\langle\Omega,\Omega\rangle$ is in the extension of $R$ or that it is not. If $\langle\Omega,\Omega\rangle$ is in the extension of $R$, then $Rxx$ is satisfied by a variable assignment that assigns $\Omega$ to $x$ (by part 1 of the definition of  {satisfaction}); since the consequent of $Rxx\eif Rxx$ is satisfied, the conditional is satisfied (by part 5). If $\langle\Omega,\Omega\rangle$ is not in the extension of $R$, then $Rxx$ is not satisfied by a variable assignment that assigns $\Omega$ to $x$ (by part 1); since antecedent of $Rxx\eif Rxx$ is not satisfied, the conditional is satisfied (by part 5). In either case, $Rxx\eif Rxx$ is satisfied. This is true for any member of the UD, so $\forall x(Rxx \eif Rxx)$ is satisfied by any truth value assignment (by part 7). So $\forall x(Rxx \eif Rxx)$ is true in \model{M} (by the definition of {truth}). This argument holds regardless of the exact UD and regardless of the exact extension of $R$, so $\forall x(Rxx \eif Rxx)$ is true in any model. Therefore, it is a tautology.
 \end{quote}
 
+\begin{quote}
+Vegyünk néhány tetszőleges modellt; \model{M}. Ezután vegyünk egy tetszőleges szereplőt a UD-ból; kényelmünk érdekében, nevezzük ezt $\Omega$ -nak. Ez lehet az oka annak, hogy $\langle\Omega,\Omega\rangle$ a $R$ kiterjesztés része, vagy nem része. Amennyiben a $\langle\Omega,\Omega\rangle$ a $R$ kiterjesztés része, akkor a $Rxx$ elégedett egy változó feladattal, ami hozzárendeli a $\Omega$ a $x$ -hez (az 1. résztől); miután az ezt megelőző $Rxx\eif Rxx$ nem volt megfelelő,  a feltétel teljesül (az 5. résztől). Mindkét esetben, $Rxx\eif Rxx$ kielégítő, megvalósult. Ez az UD bármely szereplőjére igaz, tehát a $\forall x(Rxx \eif Rxx)$ megvalósul bármely igaz érték hozzárendelésnél (a 7. résztől). Tehát a $\forall x(Rxx \eif Rxx)$ igaz, a \model{M} -ben, (az igazság meghatározott jelentése esetében). Ez az érvelés kimutatja, hogy független a pontos UD-től, és független a pontos kiterjesztésétől a $R$-nek, tehát $\forall x(Rxx \eif Rxx)$ bármely modellben megvalósul. Ezek alapján tehát, ez egy tautológia.
+
+
 Giving arguments about all possible models typically requires clever combination of two strategies:
 
 1. Divide cases between two possible kinds, such that every case must be one kind or the other.  In the argument on p.~\pageref{allmodels1}, for example, we distinguished two kinds of models based on whether or not a specific ordered pair was in \extension{R}. In the argument above, we distinguished cases in which an ordered pair was in \extension{R} and cases in which it was not.
 
 2. Consider an arbitrary object as a way of showing something more general. In the argument above, it was crucial that $\Omega$ was just some arbitrary member of the UD. We did not assume anything special about it. As such, whatever we could show to hold of $\Omega$ must hold of every member of the UD--- if we could show it for $\Omega$, we could show it for anything. In the same way, we did not assume anything special about \model{M}, and so whatever we could show about \model{M} must hold for all models.
+
+Ahhoz, hogy minden lehetséges modellről érveket adjunk, két stratégia okos kombinálása szükséges:
+
+1. Felosztani az eseteket a két lehetséges fajta/jelleg között, úgy, hogy minden esetnek az egyik vagy a másik fajtának/jellegnek kell lennie. A p.~\pageref{allmodels1}, -ről szóló érvelésben például kétféle modellt különböztettünk meg arra alapozva, hogy egy speciálisan hozzárendelt pár a  \extension{R}-ben volt e vagy sem. A fenti érvelésben, mi az eseteket az alapján különböztettük meg, hogy a hozzárendelt pár a \extension{R}-ben volt, vagy nem volt.
+
+2. Tekintsünk egy korlátlan tárgyat aszerint, hogy valamilyen általános dolgot mutat. A fenti érvelésben fontos volt, hogy a $\Omega$ csak valamiféle korlátlan tagja volt az UD-nek. Mi nem feltételeztünk semmilyen speciális dolgot róla. Eszerint bármit, amit ki tudunk mutatni az $\Omega$ -nek, annak muszáj megragadnia az UD minden tagját – ha az $\Omega$ -nek sikerülne kimutatni, akkor bármi másnak is sikerülne. A hasonló esetben, mi nem feltételeztünk semmi rendkívülit a \model{M} -ről, szóval bármi mást is ki tudnánk mutatni a \model{M} -ből, és annak muszáj minden modellre érvényesnek lennie.
 
 %ML fordítása vége
 
